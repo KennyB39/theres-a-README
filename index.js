@@ -5,11 +5,16 @@ const generateMarkdown = require(generateMarkdown);
 // TODO: Create an array of questions for user input
 const questions = [
     {name:"title",
-    message: "project title?",
+    message: "what is the name of your project?",
     type: "input"
 },{
     name: "description",
-    message: "what did you do?",
+    message: "what process did you use?",
+    type: "input"
+    
+},{
+    name: "installation",
+    message: "How would you install this project?",
     type: "input"
 }
 ];
@@ -17,7 +22,7 @@ const questions = [
 // TODO: Create a function to write README file
 function writeToFile(data) {
     fs.writeFile("filename.md",data,(err)=>{
-        
+        (err) ? console.log(err) : console.log(`success`);
     })
 }
 
