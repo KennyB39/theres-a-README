@@ -26,64 +26,72 @@ const questions = [
         message: "choose a which licesne you'd like to use.",
         type: "checkbox",
         choices: ["MIT license", "GNU General Public License v3.0", "Eclipse Public License 2.0", "Apache License 2.0", "none"],
-        validate: your_license => {
-            if (your_license) {
-                return true;
-            } else {
-                console.log("choose a license for your project?");
-                return false;
-            }
-        }
+        // validate: your_license => {
+        //     if (your_license) {
+        //         return true;
+        //     } else {
+        //         console.log("choose a license for your project?");
+        //         return false;
+        //     }
+        // }
 
     
 },{
     name: "contributors",
     message: "How will others be able to contribute to the project",
     type: "input",
-    validate: your = your_contribution => {
-        if (your_contribution) {
-            return true;
-        } else {
-            console.log("Provide information on how to contribute to the project.");
-            return false;
-        }
-    }
+    // validate: your_contribution => {
+    //     if (your_contribution) {
+    //         return true;
+    //     } else {
+    //         console.log("Provide information on how to contribute to the project.");
+    //         return false;
+    //     }
+    // }
 },{
     name: "Test",
     message: "how can users test?",
     type: "input",
-    validate: your = your_test => {
-        if (your_test) {
-            return true;
-        } else {
-            console.log("choose a license for your project?");
-            return false;
-        }
-    }
+    // validate: your_test => {
+    //     if (your_test) {
+    //         return true;
+    //     } else {
+    //         console.log("choose a license for your project?");
+    //         return false;
+    //     }
+    // }
    
 
 },{
     name: "github",
     message: "Enter your Github username.",
     type: "input",
-    validate: your = github_input => {
-        if (github_input) {
-            return true;
-        } else {
-            console.log("enter your github username.");
-            return false;
-        }
-    }
+    // validate: github_input => {
+    //     if (github_input) {
+    //         return true;
+    //     } else {
+    //         console.log("enter your github username.");
+    //         return false;
+    //     }
+    // }
 },{
     name: "Email",
     message: "Enter your Email.",
-    type: "input"
+    type: "input",
+    // validate: email_input => {
+    //     if (email_input) {
+    //         return true;
+    //     } else {
+    //         console.log("please enter your Email.");
+    //         return false;
+    //     }
+    // }
 }
 
 ];
 
 // TODO: Create a function to write README file
-function writeToFile(data) {
+function writeToFile(fileNmae, data) {
     fs.writeFile("filename.md", data, (err) => {
         (err) ? console.log(err) : console.log(`success`);
     })
@@ -91,8 +99,8 @@ function writeToFile(data) {
 
 // TODO: Create a function to initialize app
 function init() {
-    inquirer.prompt(questions).then((result) => {
-        const markDown = generateMarkdown(result);
+    inquirer.prompt(questions).then((userInput) => {
+        const markDown = generateMarkdown(userInput);
         writeToFile(markDown);
     })
 }

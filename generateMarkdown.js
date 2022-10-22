@@ -17,6 +17,16 @@ return `#${data.title}
 
 ![badge](https://img.shields.io/badge/license-${data.license}-brightgreen)<br />
 
+##Table of contents
+-[Description]
+-[Installation]
+-[Usage]
+-[Contribution]
+-[Testing]
+-[Eamil and Github]
+
+
+
 ##Description
 
 ${data.description}
