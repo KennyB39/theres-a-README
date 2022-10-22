@@ -18,12 +18,13 @@ return `#${data.title}
 ![badge](https://img.shields.io/badge/license-${data.license}-brightgreen)<br />
 
 ##Table of contents
--[Description]
--[Installation]
--[Usage]
--[Contribution]
--[Testing]
--[Eamil and Github]
+-[Description](#description)
+-[Installation](#installation)
+-[Usage](#usage)
+-[Contribution](#contribution)
+-[Testing](#testing)
+-[Questions](#questions)
+
 
 
 
@@ -47,20 +48,11 @@ ${data.contribution}
 
 ${data.test}
 
-##Contact information
+##Questions
 
 - Github: [${data.github}](https://github.com/${data.username})<br />
 
 - Email: [${data.email}]
-
-
-
-
-
-
-
-
-
 `
 
 }
