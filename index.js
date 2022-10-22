@@ -24,8 +24,8 @@ const questions = [
     }, {
         name: "license",
         message: "choose a which licesne you'd like to use.",
-        type: "checkbox",
-        choices: ["MIT license", "GNU General Public License v3.0", "Eclipse Public License 2.0", "Apache License 2.0", "none"],
+        type: "list",
+        choices: ["MIT", "GNU", "Eclipse", "Apache", "none"],
         
 
     
@@ -35,7 +35,7 @@ const questions = [
     type: "input",
     
 },{
-    name: "Test",
+    name: "test",
     message: "how can users test?",
     type: "input",
    
@@ -47,7 +47,7 @@ const questions = [
     type: "input",
  
 },{
-    name: "Email",
+    name: "email",
     message: "Enter your Email.",
     type: "input",
   
